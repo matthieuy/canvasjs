@@ -99,7 +99,7 @@ export default function (plotUnit) {
 
 				color = dataPoints[i].color ? dataPoints[i].color : dataSeries._colorSet[i % dataSeries._colorSet.length];
 				//color = "#1B4962";
-				drawRect(ctx, x1, y1, x2, y2, color, 0, null, bevelEnabled, false, false, false, dataSeries.fillOpacity);
+				drawRect(ctx, x1, y1, x2, y2, color, 2, 'white', bevelEnabled, false, false, false, dataSeries.fillOpacity);
 
 
 				var id = dataSeries.dataPointIds[i];

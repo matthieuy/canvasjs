@@ -1,5 +1,5 @@
-
-import {isCanvasSupported} from '../helpers/utils';
+import AnimationHelper from '../helpers/animator';
+import { isCanvasSupported, drawRect, intToHexColorString} from '../helpers/utils';
 
 export default function (plotUnit) {
 
@@ -22,7 +22,7 @@ export default function (plotUnit) {
 	//var yZeroToPixel = (axisYProps.y2 - axisYProps.height / rangeY * Math.abs(0 - plotUnit.axisY.viewportMinimum) + .5) << 0;
 	var yZeroToPixel = (plotUnit.axisY.conversionParameters.reference + plotUnit.axisY.conversionParameters.pixelPerUnit * (0 - plotUnit.axisY.conversionParameters.minimum)) << 0;
 
-	var maxBarWidth = this.dataPointMaxWidth ? this.dataPointMaxWidth : this.width * .15 << 0;
+	var maxBarWidth = this.dataPointMaxWidth ? this.dataPointMaxWidth : this.width * .25 << 0;
 	var xMinDiff = plotUnit.axisX.dataInfo.minDiff;
 	var barWidth = (((plotArea.width / Math.abs(plotUnit.axisX.viewportMaximum - plotUnit.axisX.viewportMinimum)) * Math.abs(xMinDiff)) / plotUnit.plotType.plotUnits.length * .9) << 0;
 
@@ -106,7 +106,7 @@ export default function (plotUnit) {
 
 				color = dataPoints[i].color ? dataPoints[i].color : dataSeries._colorSet[i % dataSeries._colorSet.length];
 
-				drawRect(ctx, x1, y1, x2, y2, color, 0, null, bevelEnabled && (dataPoints[i].y >= 0), (dataPoints[i].y < 0) && bevelEnabled, false, false, dataSeries.fillOpacity);
+				drawRect(ctx, x1, y1, x2, y2, color, 2, 'white', bevelEnabled && (dataPoints[i].y >= 0), (dataPoints[i].y < 0) && bevelEnabled, false, false, dataSeries.fillOpacity);
 
 				//if (dataSeries.markerType && dataSeries.markerSize > 0) {
 				//    RenderHelper.drawMarker(x1 + (x2 - x1)/2, y1, ctx, dataSeries.markerType, dataSeries.markerSize, color, dataSeries.markerBorderColor, dataSeries.markerBorderThickness ? dataSeries.markerBorderThickness : 1);

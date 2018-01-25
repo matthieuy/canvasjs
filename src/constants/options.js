@@ -34,7 +34,7 @@ export const defaultOptions = {
 			verticalAlign: "top",//top, center, bottom
 			horizontalAlign: "center",//left, center, right
 			fontSize: 20,//in pixels
-			fontFamily: "Calibri",
+      fontFamily: "Arial",
 			fontWeight: "normal", //normal, bold, bolder, lighter,
 			fontColor: "black",
 			fontStyle: "normal", // normal, italic, oblique
@@ -57,7 +57,7 @@ export const defaultOptions = {
 			verticalAlign: "top",//top, center, bottom
 			horizontalAlign: "center",//left, center, right
 			fontSize: 14,//in pixels
-			fontFamily: "Calibri",
+			fontFamily: "Arial",
 			fontWeight: "normal", //normal, bold, bolder, lighter,
 			fontColor: "black",
 			fontStyle: "normal", // normal, italic, oblique
@@ -80,7 +80,7 @@ export const defaultOptions = {
 			horizontalAlign: "right",
 
 			fontSize: 14,//in pixels
-			fontFamily: "calibri",
+      fontFamily: "Arial",
 			fontWeight: "normal", //normal, bold, bolder, lighter,
 			fontColor: "black",
 			fontStyle: "normal", // normal, italic, oblique
@@ -120,7 +120,7 @@ export const defaultOptions = {
 
 			fontSize: 14, // in pixels
 			fontColor: "#000000",
-			fontFamily: "Calibri, Arial, Georgia, serif;",
+      fontFamily: "Arial",
 			fontWeight: "normal", //normal, bold, bolder, lighter,
 			fontStyle: "italic"  // normal, italic, oblique
 		},
@@ -137,12 +137,12 @@ export const defaultOptions = {
 			title: null, // string
 			titleFontColor: "black",
 			titleFontSize: 20,
-			titleFontFamily: "arial",
+      titleFontFamily: "Arial",
 			titleFontWeight: "normal",
 			titleFontStyle: "normal",
 
 			labelAngle: 0,
-			labelFontFamily: "arial",
+      labelFontFamily: "Arial",
 			labelFontColor: "black",
 			labelFontSize: 12,
 			labelFontWeight: "normal",
@@ -189,7 +189,7 @@ export const defaultOptions = {
 			lineDashType: "solid",
 			label: "",
 			labelBackgroundColor: "#EEEEEE",
-			labelFontFamily: "arial",
+			labelFontFamily: "Arial",
 			labelFontColor: "orange",
 			labelFontSize: 12,
 			labelFontWeight: "normal",
@@ -280,7 +280,7 @@ export const defaultOptions = {
 			text: "",
 			horizontalAlign: "center",//left, center, right
 			fontSize: 12,//in pixels
-			fontFamily: "calibri",
+      fontFamily: "Arial",
 			fontWeight: "normal", //normal, bold, bolder, lighter,
 			fontColor: "black",
 			fontStyle: "normal", // normal, italic, oblique

@@ -7,6 +7,10 @@ export default function (plotUnit) {
 	var _this = this;
 	var totalDataSeries = plotUnit.dataSeriesIndexes.length;
 
+
+	var indexLabelRadius = 0;
+	var recursionCount = 0;
+
 	if (totalDataSeries <= 0)
 		return;
 
@@ -721,7 +725,7 @@ export default function (plotUnit) {
 
 			if (dataSeries.indexLabelPlacement !== "inside") {
 
-				var indexLabelRadius = outerRadius * indexLabelRadiusToRadiusRatio;
+				indexLabelRadius = outerRadius * indexLabelRadiusToRadiusRatio;
 
 				for (i = 0; i < dataPoints.length; i++) {
 					var dataPointEO = dataPointEOs[i];

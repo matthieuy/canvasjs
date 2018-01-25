@@ -184,7 +184,7 @@ TextBlock.prototype._wrapText = function wrapText() {
   this.width = width + this.padding * 2;
   this.height = height + this.padding * 2;
 
-  this.ctx.font = font; // Restore the font
+	this.ctx.font = font; // Restore the font
 }
 
 TextBlock.prototype._getFontString = function () {

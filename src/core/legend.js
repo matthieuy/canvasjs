@@ -3,7 +3,7 @@ import DataSeries from './data_series';
 import CanvasJSObject from './canvasjs';
 import TextBlock from './text_block';
 import RenderHelper from '../helpers/render';
-import {extend, getFontHeightInPixels} from '../helpers/utils';
+import { extend, getFontHeightInPixels, intToHexColorString} from '../helpers/utils';
 
 function Legend(chart, options, theme) {
   Legend.base.constructor.call(this, "Legend", options, theme);
@@ -166,7 +166,7 @@ Legend.prototype.render = function () {
           text: item.text,
           horizontalAlign: "left",//left, center, right
           fontSize: this.fontSize,//in pixels
-          fontFamily: this.fontFamily,
+          fontFamily: 'Arial',
           fontWeight: this.fontWeight, //normal, bold, bolder, lighter,
           fontColor: this.fontColor,
           fontStyle: this.fontStyle, // normal, italic, oblique
@@ -370,7 +370,10 @@ Legend.prototype.render = function () {
   container.layoutManager.registerSpace(position, { width: this.width + 2 + 2, height: this.height + 5 + 5 });
 
   this.bounds = {
-    x1: left, y1: top, x2: left + this.width, y2: top + this.height
+		x1: left,
+		y1: top,
+		x2: left + this.width,
+		y2: top + this.height
   };
 }
 
