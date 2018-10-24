@@ -8,6 +8,9 @@ function yScaleAnimation(fractionComplete, animationInfo) {
   const base = animationInfo.animationBase;
 
   const offsetY = (base - base * fractionComplete);
+  if (!devicePixelBackingStoreRatio) {
+    var devicePixelBackingStoreRatio = window.devicePixelRatio || 1;
+  }
 
   ctx.drawImage(sourceCanvas, 0, 0, sourceCanvas.width, sourceCanvas.height, 0, offsetY,
      ctx.canvas.width / devicePixelBackingStoreRatio, fractionComplete * ctx.canvas.height / devicePixelBackingStoreRatio);
@@ -22,6 +25,9 @@ function xScaleAnimation(fractionComplete, animationInfo) {
   const base = animationInfo.animationBase;
 
   const offsetX = (base - base * fractionComplete);
+  if (!devicePixelBackingStoreRatio) {
+    var devicePixelBackingStoreRatio = window.devicePixelRatio || 1;
+  }
 
   ctx.drawImage(sourceCanvas, 0, 0, sourceCanvas.width, sourceCanvas.height, offsetX, 0,
     fractionComplete * ctx.canvas.width / devicePixelBackingStoreRatio, ctx.canvas.height / devicePixelBackingStoreRatio);
@@ -37,6 +43,9 @@ function xClipAnimation(fractionComplete, animationInfo) {
   ctx.save();
 
   if (fractionComplete > 0)
+    if (!devicePixelBackingStoreRatio) {
+      var devicePixelBackingStoreRatio = window.devicePixelRatio || 1;
+    }
     ctx.drawImage(sourceCanvas, 0, 0, sourceCanvas.width * fractionComplete, sourceCanvas.height, 0, 0,
       sourceCanvas.width * fractionComplete / devicePixelBackingStoreRatio, sourceCanvas.height / devicePixelBackingStoreRatio);
 
@@ -53,6 +62,9 @@ function fadeInAnimation(fractionComplete, animationInfo) {
   ctx.save();
 
   ctx.globalAlpha = fractionComplete;
+  if (!devicePixelBackingStoreRatio) {
+    var devicePixelBackingStoreRatio = window.devicePixelRatio || 1;
+  }
 
   ctx.drawImage(sourceCanvas, 0, 0, sourceCanvas.width, sourceCanvas.height, 0, 0,
     ctx.canvas.width / devicePixelBackingStoreRatio, ctx.canvas.height / devicePixelBackingStoreRatio);

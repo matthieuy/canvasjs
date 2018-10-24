@@ -1,6 +1,6 @@
 
-import CanvasJSObject from './canvasjs';
-import {extend} from '../helpers/utils';
+import CanvasJSObject from '../core/canvasjs';
+import { extend, intToHexColorString, getLineDashArray } from '../helpers/utils';
 
 function StripLine(chart, options, theme, id, axis) {
   StripLine.base.constructor.call(this, "StripLine", options, theme, axis);

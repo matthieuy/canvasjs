@@ -33,6 +33,7 @@ import {
   numberFormat,
   getLineDashArray,
   intToHexColorString,
+  dateFormat,
   compareDataPointX
 } from '../helpers/utils';
 
@@ -2708,7 +2709,7 @@ Chart.prototype.renderIndexLabels = function (targetCtx) {
         }
       }
 
-      
+
 
     } else {
       textBlock.render(true);

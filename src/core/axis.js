@@ -1,7 +1,17 @@
 
 import CanvasJSObject from './canvasjs';
 import TextBlock from './text_block';
-import {extend, numberFormat, getLineDashArray} from '../helpers/utils';
+import {
+	extend,
+	numberFormat,
+	getLineDashArray,
+	convertToNumber,
+	getFontHeightInPixels,
+	addToDateTime,
+	dateFormat,
+} from '../helpers/utils';
+import {constants} from '../constants/culture';
+import StripLine from '../helpers/strip_lines';
 
 function Axis(chart, options, type, position) {
 
@@ -323,7 +333,7 @@ Axis.prototype.createLabelsAndCalculateHeight = function () {
 			textBlock = this._labels[i].textBlock;
 
 			var size = textBlock.measureText();
-			
+
 			//var diagonal = Math.sqrt(Math.pow(size.height, 2) + Math.pow(size.width, 2));
 
 			//var hypotenuse = Math.sqrt(Math.pow(size.height / 2, 2) + Math.pow(size.width, 2));

@@ -1,3 +1,4 @@
+import {constants} from "../constants/culture";
 
 export function extend(derived, base) {
 	derived.prototype = inherit(base.prototype);

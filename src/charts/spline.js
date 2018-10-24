@@ -1,5 +1,7 @@
 
-import {isCanvasSupported} from '../helpers/utils';
+import {isCanvasSupported, getLineDashArray, intToHexColorString, getBezierPoints} from '../helpers/utils';
+import RenderHelper from '../helpers/render'
+import AnimationHelper from '../helpers/animator'
 
 export default function (plotUnit) {
 		var ctx = plotUnit.targetCanvasCtx || this.plotArea.ctx;

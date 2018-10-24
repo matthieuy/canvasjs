@@ -2,7 +2,7 @@
 import AnimationHelper from '../helpers/animator';
 import RenderHelper from '../helpers/render';
 import CanvasJSObject from './canvasjs';
-import {extend, isCanvasSupported, getObjectId, drawRect, drawSegment} from '../helpers/utils';
+import {extend, isCanvasSupported, getObjectId, drawRect, drawSegment, dateFormat} from '../helpers/utils';
 
 function ToolTip(chart, options, theme) {
 
