@@ -1,12 +1,10 @@
 {
   "name": "canvasjs",
-  "version": "1.8.2-pre",
   "description": "CanvasJS charting library",
   "main": "dist/index.js",
   "scripts": {
     "build": "webpack -p"
   },
-  "repository": "https://github.com/Tsur/canvasjs.git",
   "license": "CC",
   "dependencies": {},
   "devDependencies": {
